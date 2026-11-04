@@ -1,0 +1,5 @@
+# Optional: the free offline Burmese voice "Meta MMS (offline)". Install with INSTALL_MMS.bat or
+#   py -3.12 -m pip install -r requirements-mms.txt
+# torch is large (about 200 MB CPU-only on Windows, more with CUDA); the voice model itself downloads on first use.
+torch>=2.2
+transformers>=4.40
