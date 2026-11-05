@@ -2,27 +2,27 @@
 
 > Recap dubbing tool: English, Chinese, Japanese, Korean, Thai … (20 languages + auto-detect) → Myanmar · release **KG ReMovie 3.0** (`VERSION.txt`)
 
-## 🆕 Version 3.0 — အသစ်တွေ
+## 🆕 Version 3.0
 
-| **Multi-language → Myanmar** — ဘာသာစကား ၂၀ + **Auto-detect** | Settings → *Source language* |
-| **Slow motion ပိုနှေးနိုင်ပြီ** — **0.25×** နဲ့ **0.35×** ထပ်ထည့် | Tools → Slow motion → *Speed* |
-| **ကျား/မ အသံခွဲခြင်း** — မူလစကားပြောသူရဲ့ pitch အရ Thiha (ကျား) / Nilar (မ) | Settings → *Voice mode* |
-| **မူလအသံ + dub အသံ ရောစပ်ခြင်း** — မူလအသံ 0–100%၊ dub ပြောနေချိန် အလိုအလျောက် လျှော့ | Settings → *Original audio* |
+| **Multi-language → Myanmar** — ဘာသာစကား ၂၀ + **Auto-detect**
+| **Slow motion ပိုနှေးနိုင်ပြီ** — **0.25×** နဲ့ **0.35×** ထပ်ထည့်
+| **ကျား/မ အသံခွဲခြင်း** — မူလစကားပြောသူရဲ့ pitch အရ Thiha (ကျား) / Nilar (မ)
+| **မူလအသံ + dub အသံ ရောစပ်ခြင်း** — မူလအသံ 0–100%၊ dub ပြောနေချိန် အလိုအလျောက် လျှော့
 
 ### Multi-language → Myanmar
 **Source language** dropdown ထဲက ဘာသာစကားတစ်ခု ရွေးပါ: English, Chinese, Japanese, Korean, Thai, Vietnamese, Indonesian, Malay, Filipino, Hindi, Bengali, Urdu, Arabic, Turkish, Russian, Spanish, French, German, Portuguese, Italian — သို့မဟုတ် **Auto-detect** (Whisper က ဗီဒီယိုတစ်ခုချင်းစီရဲ့ ဘာသာကို ရှာပြီး AI ကို ပြောပြတယ်)။
 - Whisper က multilingual `small` (~480 MB) ကို သုံးတယ် (English က `small.en`)။ ပိုတိကျချင်ရင် `config.json` မှာ `"whisper_model_other": "medium"` (Chinese အတွက် `whisper_model_zh`)။
 - နာမည်တွေကို မူရင်းအသံထွက်အတိုင်း မြန်မာအက္ခရာနဲ့ တစ်မျိုးတည်း ရေးတယ်၊ idiom တွေကို အဓိပ္ပာယ်နဲ့ ပြောတယ်။
-- **အရည်အသွေးက ဘာသာစကားပေါ် မူတည်တယ်** — English / Spanish / French / German လို ဘာသာတွေက Whisper မှာ ပိုကောင်းပြီး အရင်းအမြစ်နည်းတဲ့ ဘာသာတွေက ပိုမှားနိုင်တယ်။ **Check transcript first** နဲ့ အရင်စစ်ပါ။
-- Auto-detect က **မြန်မာစကား** လို့ ကြားရင် ရပ်ပြီး ပြောပါတယ် (Whisper က မြန်မာကို မှန်မှန် မဖတ်နိုင်လို့)။
-- ဘာသာတစ်ခုချင်းစီက သီးသန့် cache / job folder (`jobs\<video>_<code>_ja` …) ရှိတယ်။
+  
+- **အရည်အသွေးက ဘာသာစကားပေါ် မူတည်တယ်** — English / Spanish / French / German လို ဘာသာတွေက Whisper မှာ ပိုကောင်းပြီး အရင်းအမြစ်နည်းတဲ့ ဘာသာတွေက ပိုမှားနိုင်တယ်။ **Check transcript first** နဲ့ အရင်စစ်။
+
+- ဘာသာတစ်ခုချင်းစီက သီးသန့် cache / Output Video folder ရှိတယ်။
 
 ### Slow motion — ပိုနှေးအောင်
-Speed ကို **0.25× / 0.35× / 0.5× / 0.7×** ကနေ ရွေးတယ် (0.25× = ၄ ဆ နှေး)။ ကြားဖြတ် frame တွေကို ရောစပ်ထားလို့ လှုပ်ခါမှု မရှိပါဘူး။ Auto edit ရဲ့ slow ထဲမှာလည်း 0.35× ပါလာတယ်။
+Speed ကို **0.25× / 0.35× / 0.5× / 0.7×** ကနေ ရွေးတယ် (0.25× = ၄ ဆ နှေး)။ ကြားဖြတ် frame တွေကို ရောစပ်ထားလို့ လှုပ်ခါမှု မရှိပါဘူး။ Auto edit ရဲ့ slow ထဲမှာလည်း 0.35× ပါတယ်။
 
 ### ကျား/မ အသံခွဲခြင်း (Voice mode)
-| Mode | အဓိပ္ပာယ် |
-|---|---|
+| Mode |
 | Selected voice | ရွေးထားတဲ့ Edge voice တစ်ခုတည်း (မူလအတိုင်း) |
 | Male voice (Thiha) | စာကြောင်းအားလုံး ကျားအသံ |
 | Female voice (Nilar) | စာကြောင်းအားလုံး မအသံ |
@@ -38,16 +38,16 @@ Auto က မူလအသံရဲ့ **pitch (F0)** ကို တိုင်း
 - Dub ရဲ့ volume ကို ရှိပြီးသား **Voice vol** slider နဲ့ ဆက်ချိန်လို့ရတယ်။
 - မူလစကားကို အသံထဲ ထပ်ထည့်ရင် dub နဲ့ ရောပြီး ကြားနိုင်တယ် — မူလစကားမလိုရင် အနိမ့် (20–30%) ထား၊ ဂီတ/ပတ်ဝန်းကျင်ပဲ လိုချင်ရင် Duck ဖွင့်ပါ။
 
-## Version 2.0 — အသစ်တွေ
+## Version 2.0
 
-| Feature | ဘယ်မှာ |
+| Feature |
 |---|---|
 | **AI refine pass** — ဘာသာပြန်ပြီးသား မြန်မာစာကို AI က ထပ်ပြီး သဘာဝကျအောင် ပြန်ပြင်တယ် | Settings → *AI refine pass* |
 | **Video Look** — ဗီဒီယိုတစ်ပုဒ်လုံးကို colour filter + strength % | Production Tools → *Video Look & Auto Edit* |
 | **Vignette %** — ထောင့်တွေကို မှောင်စေတယ် (0–100%) | အတူတူ |
 | **Slow motion** — ၅ / ၁၀ စက္ကန့် slow ဖြစ်တဲ့ အပိုင်းတွေ | အတူတူ |
 | **Auto edit** — flip + zoom + freeze + vignette + slow ကို random ရောနှောပြီး အလိုအလျောက် edit | အတူတူ |
-| **Check transcript first** — ပထမ ၆၀ စက္ကန့်ကိုပဲ Whisper နဲ့ ဖတ်ပြီး စာကို ကြိုကြည့်တယ် (AI/key မလိုဘူး၊ `whisper_preview.txt`) | Settings → *Check transcript first* |
+| **Check transcript first** — ပထမ ၆၀ စက္ကန့်ကိုပဲ Whisper နဲ့ ဖတ်ပြီး စာကို ကြိုကြည့်တယ် (AI/key မလိုဘူး၊)
 
 
 ### AI refine pass
@@ -111,7 +111,7 @@ Freeze rhythm လိုပဲ **ရုပ်ပုံကိုပဲ** အစာ
    - ဇာတ်ကြောင်းပြောသူလို သဘာဝကျတဲ့ စကားပြောပုံစံနဲ့ ပြန်တယ်။
    - အကျဉ်းမချုပ်ဘူး၊ ချန်မထားဘူး။ အပိုင်းတစ်ခုရဲ့ အကြောင်းအရာကို ဘေးအပိုင်းထဲ မရွှေ့ဘူး။
    - ပြန်ပြီးတိုင်း စစ်ဆေးတဲ့အဆင့် (audit) က ချန်ခဲ့တာ၊ နေရာလွဲတာ၊ ထပ်နေတာတွေကို ပြန်ပြင်တယ်။
-   - မြန်မာစာလုံးထဲ တခြားဘာသာ စာလုံး ညှပ်ဝင်လာရင် (ဥပမာ "ဧည့်ခန်း" နေရာမှာ "မისခန်း") Gemini ကို ပြန်မေးတယ်။
+   - မြန်မာစာလုံးထဲ တခြားဘာသာ စာလုံး ညှပ်ဝင်လာရင် (ဥပမာ "ဧည့်ခန်း" နေရာမှာ "မင်္ဂလာခန်း") Gemini ကို ပြန်မေးတယ်။
 5. **အသံထုတ်** — Edge TTS မြန်မာအသံ (Thiha ယောက်ျားသံ / Nilar မိန်းမသံ) နဲ့ ထုတ်တယ်။ "Short pauses" ဖွင့်ထားရင် Edge ထည့်တတ်တဲ့ အသံတိတ်ကို ဖြတ်လို့ စာကြောင်းကြားမှာ ~၀.၂၅ စက္ကန့်ပဲ နားတယ်။
 6. **Smart Sync** — မြန်မာအသံက အချိန်ကို ဦးဆောင်ပြီး ရုပ်က လိုက်ညှိတယ်။ အသေးစိတ်ကို [Smart Sync ဘယ်လိုအလုပ်လုပ်လဲ](#smart-sync-ဘယ်လိုအလုပ်လုပ်လဲ) မှာ ကြည့်ပါ။
 7. **ဖြည့်စွက်** — Blur box (မူရင်း watermark/စာတန်းဖုံးဖို့)၊ Title၊ Logo၊ Extra text၊ Zoom၊ Flip တွေကို preview ပေါ်မှာ နေရာချပြီး ထည့်လို့ရတယ်။ Video အချိုး (**16:9 / 9:16 / 1:1 / Original**) ကိုလည်း ရွေးလို့ရတယ်။
@@ -120,7 +120,6 @@ Freeze rhythm လိုပဲ **ရုပ်ပုံကိုပဲ** အစာ
 
 ## လိုအပ်တာ
 
-| | |
 |---|---|
 | Windows | 10 / 11 (64-bit) |
 | Python | **3.12, 64-bit** — [python.org](https://www.python.org/downloads/) ကနေ သွင်းပါ။ "Add python.exe to PATH" နဲ့ "tcl/tk" ကို အမှန်ခြစ်ပါ |
@@ -161,9 +160,9 @@ Freeze rhythm လိုပဲ **ရုပ်ပုံကိုပဲ** အစာ
 | အလယ် | **Production Tools** — Zoom (1.00–1.25×)၊ Flip (ဘယ်ညာ ပြောင်းပြန်)၊ Voice vol (50–300%)၊ Short pauses၊ **Ratio** (16:9 / 9:16 / 1:1 / Original) နဲ့ **Fill** (Blur background / Black bars / Crop to fill)၊ **+ Draw Blur Box** / Delete Selected၊ Title (စာ၊ အရွယ်)၊ Logo (ဖိုင်၊ အရွယ်၊ အလင်းဖောက်မှု)၊ Extra Text Box။ |
 | အောက်ခြေ | **START / RESUME** — စတယ် (ရပ်ထားတာဆိုရင် ဆက်လုပ်တယ်)။ **STOP SAFELY** — အခု လုပ်နေတဲ့ အဆင့်ပြီးမှ ရပ်ပြီး လုပ်ပြီးသမျှ သိမ်းထားတယ်။ **Output Video** — ထွက်လာတဲ့ ဖိုင်တွေ ဖွင့်ကြည့်ဖို့။ **Edit Text** — မြန်မာ narration ကို စာကြောင်းလိုက် ပြင်ဖို့ (အောက်မှာ ကြည့်ပါ)။ |
 
-**ထွက်လာတဲ့ ဖိုင်:** `jobs\<video နာမည်>_<code>\edge_tts_smart_sync\final_edge_tts_smart_sync.mp4`
+**ထွက်လာတဲ့ ဖိုင်:** `output\<video နာမည်>_<code>\edge_tts_smart_sync\final_edge_tts_smart_sync.mp4`
 
-Job folder ထဲမှာ ကြည့်လို့ရတဲ့ ဖိုင်တွေ:
+Output folder ထဲမှာ ကြည့်လို့ရတဲ့ ဖိုင်တွေ:
 - `whisper_transcript.txt` — English စာသား
 - `timestamp_translations.json` — စာပိုင်းတိုင်းရဲ့ English နဲ့ မြန်မာ
 - `smart_sync_plan.json` — အချိန်ညှိထားတဲ့ plan
@@ -171,7 +170,7 @@ Job folder ထဲမှာ ကြည့်လို့ရတဲ့ ဖိုင�
 
 ## 🆕 Chinese (中文) → Myanmar AI Dubbing
 
-တရုတ်စကား ပြောထားတဲ့ recap / ဇာတ်လမ်းပြော video ကိုလည်း မြန်မာအသံနဲ့ dubbing လုပ်လို့ရပါပြီ။
+တရုတ်စကား ပြောထားတဲ့ recap / ဇာတ်လမ်းပြော video ကိုလည်း မြန်မာအသံနဲ့ dubbing လုပ်လို့ရ။
 
 1. ဘယ်ဘက် Settings ထဲက **Source language** ကို **`Chinese 中文 → Myanmar`** လို့ ရွေးပါ။ (English video ဆိုရင် `English → Myanmar` ပဲ ထားပါ။)
 2. **START / RESUME** နှိပ်ပါ။ ကျန်တာ အားလုံး English နဲ့ အတူတူပါပဲ — Whisper → Story memory → ဘာသာပြန် → audit → Edge TTS မြန်မာအသံ → Smart Sync။
@@ -182,7 +181,7 @@ Chinese mode မှာ ကွာတာတွေ:
 - **စာကြောင်းခွဲပုံ** — တရုတ်မှာ စကားလုံးကြားထဲ space မရှိလို့ `。！？` တို့နဲ့ `，、；：` တို့မှာ ခွဲပါတယ်။
 - **ဘာသာပြန် prompt** — ဇာတ်ကောင် / နေရာ / ဂိုဏ်း နာမည်တွေကို မူရင်း တရုတ်စာလုံးနဲ့ မှတ်ထားပြီး မြန်မာစာလုံးနဲ့ **Mandarin အသံထွက်အတိုင်း** တစ်မျိုးတည်း ရေးပါတယ်။ 成语 (idiom) တွေကို စကားလုံးအလိုက် မပြန်ဘဲ အဓိပ္ပာယ်ကို သဘာဝကျကျ ပြောပါတယ်။ 师父 / 师兄 / 少爷 လို့ ခေါ်ဝေါ်ပုံတွေကိုလည်း ဆက်နွယ်မှုနဲ့ ကိုက်အောင် ရွေးပါတယ်။ မြန်မာစာထဲ တရုတ်စာလုံး ကျန်နေရင် AI ကို ပြန်မေးပါတယ်။
 - **စစ်ဆေးမှု** — Whisper က တရုတ်စကား မကြားရရင် (သို့) တစ်ကြောင်းတည်း ထပ်ခါထပ်ခါ ရေးနေရင် AI ကို မခေါ်ခင် ရပ်ပြီး အကြောင်းရင်းကို ပြောပါတယ်။
-- **Job folder** — Chinese job တွေက `jobs\<video>_<code>_zh\` လို့ သီးသန့် folder ထဲမှာ ရှိလို့ English job နဲ့ မရောပါဘူး။ Video တစ်ခုတည်းကို ဘာသာနှစ်မျိုးလုံး လုပ်လို့ရပါတယ်။
+- **Output folder** — Chinese job တွေက `output\<video>_<code>_zh\` လို့ သီးသန့် folder ထဲမှာ ရှိလို့ English job နဲ့ မရောပါဘူး။ Video တစ်ခုတည်းကို ဘာသာနှစ်မျိုးလုံး လုပ်လို့ရပါတယ်။
 
 > 💡 နောက်ခံသီချင်း ပြင်းတဲ့ video၊ စကားပြောသူ အများကြီး ရောပြောတဲ့ video မှာ Whisper ရဲ့ တရုတ်စာသား မှားနိုင်ပါတယ်။ **Output Video** ထဲက `whisper_transcript.txt` ကို ဖွင့်စစ်ပြီး **Edit Text** မှာ မြန်မာစာကို ပြင်ပါ။
 
@@ -326,14 +325,15 @@ Internet မလိုပါဘူး။ Gemini ကို အတုနဲ့ အ�
 
 ## သတိပြုရန်
 
-- Edge TTS က Microsoft ရဲ့ online ဝန်ဆောင်မှုပါ။ Gemini ကတော့ Google ရဲ့ API ပါ။ သူတို့ရဲ့ စည်းကမ်းချက်တွေကို လိုက်နာပါ။
+- Edge TTS က Microsoft ရဲ့ online ဝန်ဆောင်မှုပါ။ Gemini ကတော့ Google ရဲ့ API ပါ။
+- သူတို့ရဲ့ စည်းကမ်းချက်တွေကို လိုက်နာပါ။
 - သုံးမယ့် video ရဲ့ မူပိုင်ခွင့်ကို ကိုယ်တိုင် တာဝန်ယူပါ။
 
 ---
 
 ## English
 
-**KG beta version 3.0** (English / Chinese → Myanmar) turns an English-narrated recap/story video into a Myanmar-narrated one
+**KG ReMovie version 3.0** (English / Chinese → Myanmar) turns an English-narrated recap/story video into a Myanmar-narrated one
 on Windows.
 
 ### How it works
@@ -407,7 +407,7 @@ Double-click **`RUN.bat`**:
   change server), set the Windows clock automatically, or run INSTALL_REQUIREMENTS.bat again; on a network that
   needs a proxy put `EDGE_TTS_PROXY=http://127.0.0.1:<port>` in the .env.
 
-Result: `jobs\<name>_<code>\edge_tts_smart_sync\final_edge_tts_smart_sync.mp4`
+Result: `output\<name>_<code>\edge_tts_smart_sync\final_edge_tts_smart_sync.mp4`
 (plus `whisper_transcript.txt`, `timestamp_translations.json`, `smart_sync_plan.json`, `run.log`).
 
 ### Advanced (`config.json`, created on the first START)
@@ -432,7 +432,7 @@ START. Everything after the transcript is the same as for English (story memory,
 Smart Sync). Differences: a multilingual Whisper model (`small`, ~480 MB; set `"whisper_model_zh": "medium"` in
 `config.json` for more accuracy), lines are cut at `。！？` / `，、；：`, names are written in Burmese letters by their
 Mandarin pronunciation with one fixed spelling per name, idioms are translated by meaning, and a video with no Chinese
-speech stops before any AI request. Chinese jobs live in their own `jobs\<video>_<code>_zh` folder.
+speech stops before any AI request. Chinese jobs live in their own `output\<video>_<code>_zh` folder.
 
 **Orynx (https://orynx.dev).** Put `ORYNX_API_KEY=` next to (or instead of) `GEMINI_API_KEY=` in `.env`. By default
 Gemini goes first and Orynx takes over when all Gemini keys/models are exhausted (429/quota/503/timeout); the same
